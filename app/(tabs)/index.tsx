@@ -7,13 +7,16 @@ import ShopAllScreen from "@/screens/ShopAllScreen";
 import BlogScreen from "@/screens/BlogScreen";
 import AboutUsScreen from "@/screens/AboutUsScreen";
 import TopNavbar from "@/components/TopNavbar";
-import { name as appName } from "./app.json";
+import appConfig from "../../app.json";
+
+
+const appName = appConfig.expo.name;
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <>
       <TopNavbar />
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
@@ -21,8 +24,11 @@ const App = () => {
         <Stack.Screen name="Blog" component={BlogScreen} />
         <Stack.Screen name="About Us" component={AboutUsScreen} />
       </Stack.Navigator>
-    </NavigationContainer>
+    </>
   );
 };
 
+export default App;
+
 AppRegistry.registerComponent(appName, () => App);
+
