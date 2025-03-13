@@ -18,7 +18,7 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts", 
     "app/**/*", 
-    "screens/**/*
+    "screens/**/*", 
     "components/**/*", 
   ],
   "exclude": ["node_modules", "babel.config.js", "metro.config.js"]

@@ -1,24 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
-import { useRouter } from "expo-router";
+import { View, Text, StyleSheet } from "react-native";
 
 const TopNavbar: React.FC = () => {
-  const router = useRouter();
-
   return (
     <View style={styles.navbar}>
-      <Pressable onPress={() => router.push("/home")}>
-        <Text style={styles.navText}>Home</Text>
-      </Pressable>
-      <Pressable onPress={() => router.push("/shop-all")}>
-        <Text style={styles.navText}>Shop All</Text>
-      </Pressable>
-      <Pressable onPress={() => router.push("/blog")}>
-        <Text style={styles.navText}>Blog</Text>
-      </Pressable>
-      <Pressable onPress={() => router.push("/about-us")}>
-        <Text style={styles.navText}>About Us</Text>
-      </Pressable>
+      <Text style={styles.navText}>Home</Text>
+      <Text style={styles.navText}>Shop All</Text>
+      <Text style={styles.navText}>Blog</Text>
+      <Text style={styles.navText}>About Us</Text>
     </View>
   );
 };
